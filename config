@@ -1,84 +1,34 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
-    "width": 2560, // Waybar width
+    "height": 32, // Waybar height (to be removed for auto height)
+    "width": 5120, // Waybar width
     "spacing": 5, // Gaps between modules (0px)
     // Choose the order of the modules
 
-//     "modules-left": ["river/tags"], 
-      "modules-left": ["hyprland/workspaces"],
- //     "modules-center": ["river/window"],
-      "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "custom/pipewire", "cpu", "memory", "clock"],
+    "modules-left": ["river/tags"], 
+    "modules-center": ["river/window"],
+      "modules-right": ["tray", "custom/pipewire", "cpu", "memory", "clock"],
             
     // Modules configuration
 
-      "hyprland/workspaces": {
-	"format": "{name}: {icon}",
-          "on-click": "activate",
-          "on-scroll-up": "hyprctl dispatch workspace e+1",
-         "on-scroll-down": "hyprctl dispatch workspace e-1",
-	"format-icons": {
-		"1": "🌐",
-		"2": "📁",
-		"3": "👾",
-		"4": "💬",
-		"5": "📼",
-		"6": "📷",
-		"7": "📸",
-		"8": "📜",
-		"9": "🪶",
-	       "10": "😉",
-	//	"1": "WWW",
-	//	"2": "File/Edit",
-	//	"3": "Games",
-	//	"4": "Chat",
-	//	"5": "OBS",
-	//	"6": "Photo",
-	//	"7": "Camera",
-	//	"8": "Misc",
-	//	"9": "Other",
-	  //   "10": "😉",		
-		"active": "⭕",
-	//	"default": "D"          
-	},
+"river/mode": {
+    "format": "mode: {}"
 },
 
-"dwl/tags": {
-	"format": "{id}: {icon}",
-	"format-icons": {
-  		"1": "1",
-		"2": "2",
-		"3": "3",
-		"4": "4",
-		"5": "5",
-		"6": "6",
-		"7": "7",
-		"8": "8",
-		"9": "9",
-	       "10": "10",
-		"active": "A",
-		"default": "D"
-	},    
+"river/layout": {
+    "format": "    {}",
+     "spacing": 4
+},
+
+ "river/tags": {
+         "num-tags": 9,
+         "tag-labels": ["🌐", "📁", "👾", "💬", "📼", "📷", "📸", "📜", "🪶"],
 },
 
 "river/window": {
-    "format": "{}",
-    "window.focused":"🪶"
+    "format": "{}"
 },
-
-
- //   "sway/mode": {
-   //     "format": "<span style=\"italic\">{}</span>"
-   // },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
   
     "custom/pipewire": {
     "format": "{icon}",
@@ -105,8 +55,8 @@
     },
     "clock": {
         "format": "{:%I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%m-%d-%Y}"
+         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      //  "format-alt": "{:%I:%M %p}"
     },
     "cpu": {
         "format": "CPU: {usage}%",
@@ -116,11 +66,6 @@
         "format": "MEM: {}%"
 
     },
-   "river/tags": {
-		"num-tags": 9,
-                "#button.focused": "🪶"
-  },
-
 
     }
 }
