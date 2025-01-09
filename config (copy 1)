@@ -1,14 +1,14 @@
 {
     "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "left", // Waybar position (top|bottom|left|right)
     //"height": 32, // Waybar height (to be removed for auto height)
     //"width": 3840, // Waybar width
     "spacing": 3, // Gaps between modules (0px)
     // Choose the order of the modules
 
-    "modules-left": ["niri/workspaces"], 
-    "modules-center": ["niri/window"],
-      "modules-right": ["disk", "cpu", "memory",  "tray", "clock"],
+    "modules-left": ["river/tags"], 
+    "modules-center": ["river/window"],
+      "modules-right": ["tray", "custom/pipewire", "disk", "cpu", "memory", "clock"],
             
     // Modules configuration
 
@@ -23,38 +23,13 @@
 
  "river/tags": {
          "num-tags": 9,
-         "tag-labels": ["🌐","📁","👾","💬","📼","📷","📸"," 📜","🪶"],
+         "tag-labels": ["🌐","📁","","💬","","📷","","📜","🪶"],
 },
 
 "river/window": {
     "format": "{}"
 },
-
-"niri/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		// Named workspaces
-		// (you need to configure them in niri)
-		//"browser": "",
-		//"discord": "",
-		//"chat": "<b></b>",
-
-		// Icons by state
-		"active": "",
-		"default": ""
-	}
-},
-"niri/window": {
-	"format": "{}",
-	"rewrite": {
-		"(.*) - Mozilla Firefox": "🌎 $1",
-		"(.*) - zsh": "> [$1]"
-	}
-},
- 
-"wlr/taskbar": {
-    "tooltip-format": "{title} | {app_id}",
-},
+  
     "custom/pipewire": {
     "format": "{icon}",
     "return-type": "json",
@@ -79,7 +54,7 @@
         "spacing": 4
     },
     "clock": {
-        "format": "  {:%a %d %b    %I:%M %p}  ",
+        "format": "  {:%I:%M %p}  ",
          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       //  "format-alt": "{:%I:%M %p}"
     },
