@@ -7,8 +7,8 @@
     // Choose the order of the modules
 
     "modules-left": ["niri/workspaces"], 
-    "modules-center": ["niri/window"],
-      "modules-right": ["disk", "cpu", "memory",  "tray", "clock"],
+    "modules-center": ["clock"],
+      "modules-right": ["disk", "cpu", "memory",  "tray"],
             
     // Modules configuration
 
@@ -41,7 +41,7 @@
 
 		// Icons by state
 		"active": "",
-		"default": ""
+	//	"default": ""
 	}
 },
 "niri/window": {
